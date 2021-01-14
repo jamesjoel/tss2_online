@@ -1,0 +1,10 @@
+		.bg-gray{
+			background-color: #E9ECEF;
+		}
+		.text-dark-gray{
+			color: #9E9E9E;
+		}
+		.nav .nav-item .nav-link:hover{
+			background-color: #1689C9;
+			color: #FFF;
+		}

@@ -1,0 +1,46 @@
+body{
+	background-color: #e8e8e8;
+}
+.bg-dark2{
+	background-color: #1E1E1E;
+}
+.bg-green{
+	background-color: #93C83F;
+}
+.text-green{
+	color: #93C83F;
+}
+.top-header .nav .nav-item .nav-link{
+	font-size: 13px;
+}
+
+.top-header .nav .nav-item .nav-link:hover{
+	color: #FFF;
+}
+#top-menu .nav .nav-item .nav-link{
+	font-weight: bold;
+}
+#top-menu .nav .nav-item .nav-link:hover{
+	background-color: #93C83F;
+	color: #FFF;
+}
+.navbar-brand{
+	font-weight: bold;
+}
+.jumbotron{
+	background-image: url("../images/business.jpg");
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	height: 420px;
+}
+.jumbotron h1{
+	color: #FFF;
+	font-weight: bold;
+	margin-top: 200px;
+	margin-bottom: 0;
+}
+.jumbotron p{
+	margin: 0;
+	color: #FFF;
+	font-weight: bold;
+}
