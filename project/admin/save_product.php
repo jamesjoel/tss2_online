@@ -1,7 +1,7 @@
 <?php
 
 // print_r($_POST);
-$con = mysqli_connect("localhost", "root", "", "tss2");
+include("db.php");
 
 
 $a = $_POST['p_name'];

@@ -1,7 +1,6 @@
 <?php
 // print_r($_POST);
-$con=mysqli_connect("localhost", "root", "", "tss2");
-
+include("admin/db.php");
 
 $a = $_POST['full_name'];
 $b = $_POST['username'];
