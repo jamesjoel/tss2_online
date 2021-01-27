@@ -15,6 +15,6 @@ $query = "INSERT INTO product_tbl (product_name, product_price, category, detail
 
 mysqli_query($con, $query);
 
-header("location:add_product.php");
+header("location:view_product.php");
 
 ?>

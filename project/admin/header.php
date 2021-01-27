@@ -30,7 +30,7 @@
 					<a href="add_category.php" class="nav-link">Add Category</a>
 				</li>
 				<li class="nav-item">
-					<a href="#" class="nav-link">View Category</a>
+					<a href="view_category.php" class="nav-link">View Category</a>
 				</li>
 				<li class="nav-item">
 					<a href="#" class="nav-link">View Users</a>

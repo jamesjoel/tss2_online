@@ -4,7 +4,7 @@ include("header.php");
 <div class="container mt-5">
 	<div class="row">
 		<div class="col-md-6 offset-md-3">
-			<form action="save_product.php" method="post">
+			<form action="save_category.php" method="post">
 				
 			
 			<div class="card bt-5">
@@ -14,7 +14,7 @@ include("header.php");
 				<div class="card-body">
 					<div class="form-group">
 						<label>Category Name</label>
-						<input type="text" name="p_name" class="form-control">
+						<input type="text" name="name" class="form-control">
 					</div>
 					
 				</div>
