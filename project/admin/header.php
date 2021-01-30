@@ -1,3 +1,9 @@
+<?php
+if(! isset($_SESSION['is_admin_logged_in']))
+{
+	header("location:index.php");
+}
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -18,7 +24,7 @@
 		<div id="menu" class="collapse navbar-collapse">
 			<ul class="navbar-nav">
 				<li class="nav-item">
-					<a href="index.php" class="nav-link">Dashboard</a>
+					<a href="dashboard.php" class="nav-link">Dashboard</a>
 				</li>
 				<li class="nav-item">
 					<a href="add_product.php" class="nav-link">Add Product</a>
@@ -37,6 +43,9 @@
 				</li>
 				<li class="nav-item">
 					<a href="#" class="nav-link">View Orders</a>
+				</li>
+				<li class="nav-item">
+					<a href="logout.php" class="nav-link">Logout</a>
 				</li>
 				
 			</ul>

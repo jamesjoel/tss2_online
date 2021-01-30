@@ -57,8 +57,22 @@
                     </a>
                 </div>
                 <div class="user-access">
-                    <a href="signup.php">Register</a>
-                    <a href="login.php" class="in">Sign in</a>
+                    <?php
+                    if(isset($_SESSION['is_user_logged_in']))
+                    { ?>
+                        <a href="my_account.php">My Account</a>&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+                        <a href="logout.php">Logout</a>
+                    <?php 
+                    }
+                    else
+                    { ?>
+                        <a href="signup.php">Register</a>
+                        <a href="login.php" class="in">Sign in</a>
+                    <?php 
+                    }
+                    ?>
+
+                    
                 </div>
                 <nav class="main-menu mobile-menu">
                     <ul>
