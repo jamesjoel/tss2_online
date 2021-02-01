@@ -1,6 +1,10 @@
 <?php
 include("db.php");
 include("header.php");
+
+$query = "SELECT * FROM category_tbl";
+$result = mysqli_query($con, $query);
+
 ?>
 <div class="container mt-5">
 	<div class="row">
@@ -25,11 +29,13 @@ include("header.php");
 						<label>Product Category</label>
 						<select name="p_cate" class="form-control">
 							<option>Select</option>
-							<option>Home Appliance</option>
-							<option>Electronics</option>
-							<option>Mobile and Laptop</option>
-							<option>Fashion Mens</option>
-							<option>Fashion Womens</option>
+							<?php
+							while($data = mysqli_fetch_assoc($result))
+							{ ?>
+								<option><?php echo $data['category_name'] ?></option>
+							<?php 
+							}
+							?>
 						</select>
 					</div>
 					<div class="form-group">
