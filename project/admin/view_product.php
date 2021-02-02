@@ -20,6 +20,7 @@ $result = mysqli_query($con, $query);
 					<th>S.No.</th>
 					<th>Product Name</th>
 					<th>Price</th>
+					<th>Image</th>
 					<th>Category</th>
 				</tr>
 				<?php
@@ -29,6 +30,7 @@ $result = mysqli_query($con, $query);
 						<td><?php echo $data['id']; ?></td>
 						<td><?php echo $data['product_name']; ?></td>
 						<td><?php echo $data['product_price']; ?></td>
+						<td><img height="80" src="product_images/<?php echo $data['product_img'] ?>" /></td>
 						<td><?php echo $data['category']; ?></td>
 					</tr>
 				<?php 

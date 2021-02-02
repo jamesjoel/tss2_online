@@ -84,7 +84,7 @@ $result = mysqli_query($con, $query);
                 <div class="col-lg-3 col-sm-6 mix all dresses bags">
                     <div class="single-product-item">
                         <figure>
-                            <a href="#"><img src="img/products/img-1.jpg" alt=""></a>
+                            <a href="#"><img src="admin/product_images/<?php echo $data['product_img'] ?>" style="height: 280px !important;"></a>
                             <div class="p-status sale">
                                 <b class="sale"><?php echo $data['discount']; ?>% off</b>
                             </div>
