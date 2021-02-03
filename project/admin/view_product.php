@@ -22,6 +22,7 @@ $result = mysqli_query($con, $query);
 					<th>Price</th>
 					<th>Image</th>
 					<th>Category</th>
+					<th>Delete</th>
 				</tr>
 				<?php
 				while($data = mysqli_fetch_assoc($result))
@@ -32,6 +33,7 @@ $result = mysqli_query($con, $query);
 						<td><?php echo $data['product_price']; ?></td>
 						<td><img height="80" src="product_images/<?php echo $data['product_img'] ?>" /></td>
 						<td><?php echo $data['category']; ?></td>
+						<td><a href="delete_product.php?pid=<?php echo $data['id'] ?>" class="btn btn-danger">Delete</a>
 					</tr>
 				<?php 
 				}

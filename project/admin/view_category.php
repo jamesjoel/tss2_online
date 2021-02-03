@@ -19,15 +19,23 @@ $result = mysqli_query($con, $query);
 				<tr>
 					<th>S.No.</th>
 					<th>Category Name</th>
+					<th>Delete</th>
 				</tr>
 
 				<?php
 				while($data=mysqli_fetch_assoc($result))
-				{
-					echo "<tr>";
-					echo "<td>".$data['id']."</td>";
-					echo "<td>".$data['category_name']."</td>";
-					echo "</tr>";
+				{ ?>
+					<tr>
+						<td><?php echo $data['id']; ?></td>
+						<td><?php echo $data['category_name']; ?></td>
+						<td><a href="delete_category.php?a=<?php echo $data['id'] ?>" class="btn btn-danger">Delete</a></td>
+						<!-- 
+							href="pagename.php?key=value&key=value&key=value"
+
+
+							$_GET
+						 -->
+				<?php 
 				}
 
 				?>
