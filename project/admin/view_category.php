@@ -19,15 +19,18 @@ $result = mysqli_query($con, $query);
 				<tr>
 					<th>S.No.</th>
 					<th>Category Name</th>
+					<th>Edit</th>
 					<th>Delete</th>
 				</tr>
 
 				<?php
+				$n=1;
 				while($data=mysqli_fetch_assoc($result))
 				{ ?>
 					<tr>
-						<td><?php echo $data['id']; ?></td>
+						<td><?php echo $n; ?></td>
 						<td><?php echo $data['category_name']; ?></td>
+						<td><a href="edit_category.php?key=<?php echo $data['id'] ?>" class="btn btn-info">Edit</a></td>
 						<td><a href="delete_category.php?a=<?php echo $data['id'] ?>" class="btn btn-danger">Delete</a></td>
 						<!-- 
 							href="pagename.php?key=value&key=value&key=value"
@@ -36,6 +39,7 @@ $result = mysqli_query($con, $query);
 							$_GET
 						 -->
 				<?php 
+				$n++;
 				}
 
 				?>
