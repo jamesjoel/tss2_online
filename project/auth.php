@@ -1,4 +1,7 @@
 <?php
+// $id = $_SESSION['id'];
+
+
 include("admin/db.php");
 $e = $_POST['email'];
 $p = $_POST['password'];

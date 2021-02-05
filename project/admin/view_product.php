@@ -22,20 +22,24 @@ $result = mysqli_query($con, $query);
 					<th>Price</th>
 					<th>Image</th>
 					<th>Category</th>
+					<th>Edit</th>
 					<th>Delete</th>
 				</tr>
 				<?php
+				$n=1;
 				while($data = mysqli_fetch_assoc($result))
 				{ ?>
 					<tr>
-						<td><?php echo $data['id']; ?></td>
+						<td><?php echo $n; ?></td>
 						<td><?php echo $data['product_name']; ?></td>
 						<td><?php echo $data['product_price']; ?></td>
 						<td><img height="80" src="product_images/<?php echo $data['product_img'] ?>" /></td>
 						<td><?php echo $data['category']; ?></td>
+						<td><a href="edit_product.php?pid=<?php echo $data['id'] ?>" class="btn btn-info">Edit</a>
 						<td><a href="delete_product.php?pid=<?php echo $data['id'] ?>" class="btn btn-danger">Delete</a>
 					</tr>
 				<?php 
+				$n++;
 				}
 				?>
 			</table>

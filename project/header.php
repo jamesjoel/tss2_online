@@ -48,14 +48,7 @@
                 <div class="logo">
                     <a href="./index.html"><img src="img/logo.png" alt=""></a>
                 </div>
-                <div class="header-right">
-                    <img src="img/icons/search.png" alt="" class="search-trigger">
-                    <img src="img/icons/man.png" alt="">
-                    <a href="#">
-                        <img src="img/icons/bag.png" alt="">
-                        <span>2</span>
-                    </a>
-                </div>
+                
                 <div class="user-access">
                     <?php
                     if(isset($_SESSION['is_user_logged_in']))
