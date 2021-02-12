@@ -39,5 +39,16 @@
 <a href="#" style="background-color: #DC891F" onclick="demo3()"></a>
 <a href="#" style="background-color: #1F72DC" onclick="demo4()"></a>
 
+<!-- 
+
+	document.getElementById("").value
+	document.getElementById("").innerHTML
+	document.getElementById("").style
+
+
+
+
+ -->
+
 </body>
 </html>
