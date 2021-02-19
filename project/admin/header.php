@@ -47,6 +47,9 @@ if(! isset($_SESSION['is_admin_logged_in']))
 				<li class="nav-item">
 					<a href="logout.php" class="nav-link">Logout</a>
 				</li>
+				<li class="nav-item">
+					<a href="sales.php" class="nav-link">Sales</a>
+				</li>
 				
 			</ul>
 		</div>

@@ -1,0 +1,39 @@
+
+    span {
+      display: block;
+      font-size: 20px;
+      color: white;
+    }
+
+    #days {
+      font-size: 100px;
+      color: #FFF;
+      display: inline-block;
+      line-height: 1;
+      padding: 20px;
+      font-size: 40px;
+    }
+    #hours {
+      font-size: 100px;
+      color: #FFF;
+      display: inline-block;
+      line-height: 1;
+      padding: 20px;
+      font-size: 40px;
+    }
+    #minutes {
+      font-size: 100px;
+      color: #FFF;
+      display: inline-block;
+      line-height: 1;
+      padding: 20px;
+      font-size: 40px;
+    }
+    #seconds {
+      font-size: 50px;
+      color: #FFF;
+      display: inline-block;
+      line-height: 1;
+      padding: 20px;
+      font-size: 40px;
+    }

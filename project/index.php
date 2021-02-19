@@ -4,9 +4,48 @@ include("header.php");
 $query = "SELECT * FROM product_tbl";
 $result = mysqli_query($con, $query);
 
+$query2= "SELECT * FROM sale_tbl";
+$result2 = mysqli_query($con, $query2); 
+
+$data2 = mysqli_fetch_assoc($result2);
+
+// print_r($data2);
+
+//2021-02-23
+
+// 23 Feb 2021
+
+$originalDate = $data2['date'];
+$newDate = date("d-F-Y", strtotime($originalDate));
+
 ?>
 
+<script type="text/javascript">
+    var myTime = "<?php echo $newDate; ?>";
+</script>
+<link rel="stylesheet" type="text/css" href="css/timer.css">
     <!-- Features Section Begin -->
+    <div class="jumbotron jumbotron-fluid bg-danger">
+        <div class="container">
+            <h2 class="text-light">Upcoming Sale</h2>
+            <h1 class="text-light"><?php echo $data2['sale_name']; ?></h1>
+            <h4 class="text-light">Sale Start in</h4>
+
+            
+            <div id="timer">
+              <div id="days"></div>
+              <div id="hours"></div>
+              <div id="minutes"></div>
+              <div id="seconds"></div>
+            </div>
+
+
+
+
+        </div>
+    </div>
+
+
     <section class="features-section spad">
         <div class="features-ads">
             <div class="container">
@@ -136,3 +175,6 @@ $result = mysqli_query($con, $query);
 <?php
 include("footer.php");
 ?>
+
+
+<script type="text/javascript" src="js/timer.js"></script>
