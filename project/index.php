@@ -121,9 +121,10 @@ $newDate = date("d-F-Y", strtotime($originalDate));
 
                  ?>
                 <div class="col-lg-3 col-sm-6 mix all dresses bags">
+                    <div class="zoom-left">
                     <div class="single-product-item">
                         <figure>
-                            <a href="#"><img src="admin/product_images/<?php echo $data['product_img'] ?>" style="height: 280px !important;"></a>
+                            <a href="#"><img class="img_01" data-zoom-image="admin/product_images/<?php echo $data['product_img'] ?>" src="admin/product_images/<?php echo $data['product_img'] ?>" style="height: 280px !important;"></a>
                             <div class="p-status sale">
                                 <b class="sale"><?php echo $data['discount']; ?>% off</b>
                             </div>
@@ -135,6 +136,8 @@ $newDate = date("d-F-Y", strtotime($originalDate));
 
                         </div>
                     </div>
+                    </div>
+
                 </div>
                 <?php } ?>
             </div>
@@ -175,6 +178,6 @@ $newDate = date("d-F-Y", strtotime($originalDate));
 <?php
 include("footer.php");
 ?>
-
-
+<script type="text/javascript" src="js/jquery.ez-plus.js"></script>
+<script type="text/javascript" src="js/web.js?m=20100203"></script>
 <script type="text/javascript" src="js/timer.js"></script>
