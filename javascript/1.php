@@ -3,6 +3,17 @@
 <head>
 	<title></title>
 	<script>
+
+
+		if($("#male").is(":checked")==true)
+		{
+			var gender = "male";
+		}
+		if($("#female").is(":checked")==true)
+		{
+			var gender = "female";
+
+		}
 		// javascript code here...
 		/*
 			Variable -- A variable is used for storing information.
