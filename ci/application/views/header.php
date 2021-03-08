@@ -36,6 +36,9 @@
 	      <li class="nav-item">
 	        <a class="nav-link" href="<?php echo site_url('home/contact'); ?>">Contact</a>
 	      </li>
+	      <li class="nav-item">
+	        <a class="nav-link" href="<?php echo site_url('home/signup'); ?>">Signup</a>
+	      </li>
 	    </ul>
 	  </div>
 	</nav>
