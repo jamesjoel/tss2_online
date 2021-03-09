@@ -1,13 +1,48 @@
 <?php
-
 class Home extends CI_Controller{
+
+	function __construct()
+	{
+		parent::__construct();
+		$this->load->helper("url");
+		$this->load->library("session");
+	}
 
 	function index()
 	{
-		$this->load->helper("url");
 		$this->load->view("header");
 		$this->load->view("index");
 	}
+	function login()
+	{
+		$this->load->view("header");
+		$this->load->view("login");
+
+	}
+	function auth()
+	{
+		// print_r($this->input->post());/
+		$u = $this->input->post("username");
+		$p = $this->input->post("password");
+
+		$this->load->model("UserModel");
+		$result=$this->UserModel->select_by_username($u);
+		// if(mysqli_num_rows($result)==1)
+
+		if($result->num_rows()==1)
+		{
+			echo "yes";
+		}
+		else
+		{
+			$this->session->set_flashdata("msg", "This Username and Password is Incorrect");
+			redirect("home/login");
+
+		}
+
+	}
+
+
 	function about()
 	{
 		$a = "rohit";
@@ -15,7 +50,7 @@ class Home extends CI_Controller{
 
 		$arr = array("x"=>$a, "y"=>$b, "z"=>"indore");
 
-		$this->load->helper("url");
+		
 		$this->load->view("header");
 		$this->load->view("about", $arr);
 		// load or show about.php view in screen
@@ -27,13 +62,13 @@ class Home extends CI_Controller{
 
 		$arr = array("a"=>$color);
 
-		$this->load->helper("url");
+		
 		$this->load->view("header");
 		$this->load->view("contact", $arr);
 	}// localhost/tss2/ci/index.php/home/demo2
 	function signup(){
 		// The Full Name Field is required.
-		$this->load->helper("url");
+		
 		$this->load->library("form_validation");
 		$this->form_validation->set_rules("full_name", "Full Name", "required");
 		$this->form_validation->set_rules("username", "Username", "required|valid_email");
@@ -65,7 +100,7 @@ class Home extends CI_Controller{
 
 			$this->load->model("UserModel");
 			$this->UserModel->save($data);
-			redirect("home");
+			redirect("home/login");
 		}
 		
 	}

@@ -39,6 +39,9 @@
 	      <li class="nav-item">
 	        <a class="nav-link" href="<?php echo site_url('home/signup'); ?>">Signup</a>
 	      </li>
+	      <li class="nav-item">
+	        <a class="nav-link" href="<?php echo site_url('home/login'); ?>">Login</a>
+	      </li>
 	    </ul>
 	  </div>
 	</nav>
