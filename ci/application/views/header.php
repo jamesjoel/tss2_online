@@ -36,12 +36,33 @@
 	      <li class="nav-item">
 	        <a class="nav-link" href="<?php echo site_url('home/contact'); ?>">Contact</a>
 	      </li>
-	      <li class="nav-item">
-	        <a class="nav-link" href="<?php echo site_url('home/signup'); ?>">Signup</a>
-	      </li>
-	      <li class="nav-item">
-	        <a class="nav-link" href="<?php echo site_url('home/login'); ?>">Login</a>
-	      </li>
+	      <?php
+	      if($this->session->userdata("is_user_logged_in"))
+	      { ?>
+	      	<li class="nav-item">
+	      	  <a class="nav-link" href="<?php echo site_url('user'); ?>">Dashboard</a>
+	      	</li>
+	      	<li class="nav-item">
+	      	  <a class="nav-link" href="<?php echo site_url('user/profile'); ?>">Profile</a>
+	      	</li>
+	      	<li class="nav-item">
+	      	  <a class="nav-link" href="<?php echo site_url('user/logout'); ?>">Logout</a>
+	      	</li>
+	      <?php 
+	  		}
+	      else
+	      { ?>
+
+		      <li class="nav-item">
+		        <a class="nav-link" href="<?php echo site_url('home/signup'); ?>">Signup</a>
+		      </li>
+		      <li class="nav-item">
+		        <a class="nav-link" href="<?php echo site_url('home/login'); ?>">Login</a>
+		      </li>
+	      <?php 
+	  		}
+	      ?>
+
 	    </ul>
 	  </div>
 	</nav>
