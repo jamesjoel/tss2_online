@@ -79,6 +79,34 @@ include("footer.php")
 ?>
 <script type="text/javascript">
 	$(document).ready(function(){
+		$("#username").blur(function(){
+			var a = $(this).val();
+			var re = /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
+			
+			if(a != "" && re.test(a) == true)
+			{
+				$.ajax({
+					url : "check_username.php",
+					type : "post",
+					data : { username : a },
+					success : function(rec){
+						//alert(rec);
+						if(rec==1)
+						{
+							$("#username").addClass("is-invalid");
+							$("#username_msg").html("This Username not avalable");	
+						}
+						else
+						{
+							$("#username").removeClass("is-invalid");
+							$("#username_msg").html("");
+						}
+					}
+				})
+			}
+		})
+
+
 		$("#submit").click(function(){
 			
 			var a = $("#full_name").val();
