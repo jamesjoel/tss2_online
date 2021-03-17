@@ -7,6 +7,7 @@ class Adsmodel extends CI_Model{
 		$this->load->database();
 	}
 
+	
 	function save($arr)
 	{
 		$this->db->insert("ads_tbl", $arr);
