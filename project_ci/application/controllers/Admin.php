@@ -78,15 +78,40 @@ class Admin extends CI_Controller
 	}
 	function save_ads()
 	{
+		// $_FILES['image']
 		// print_r($this->input->post());
-		$data['title']=$this->input->post("title");
-		$data['price']=$this->input->post("price");
-		$data['detail']=$this->input->post("detail");
-		$data['type']=$this->input->post("type");
-		// print_r($data);die;
-		$this->Adsmodel->save($data);
-		// $this->Adsmodel->demo();
-		redirect("admin/dashboad");
+		$config["allowed_types"]="jpg|png|jpeg|gif";
+		$config["max_size"]=1024; // 1mb
+		$config["upload_path"]="./assets/ads/";
+		$config["encrypt_name"]=true; // optional property
+
+		$this->load->library("upload", $config);
+
+		if($this->upload->do_upload())
+		{
+			$name = $this->upload->data("file_name");
+			// print_r($this->upload->data());die;
+			$data['title']=$this->input->post("title");
+			$data['price']=$this->input->post("price");
+			$data['detail']=$this->input->post("detail");
+			$data['type']=$this->input->post("type");
+			$data['image_path'] = $name;
+		
+			$this->Adsmodel->save($data);
+		
+			redirect("admin/dashboad");
+		}
+		else
+		{
+			$err = $this->upload->display_errors(); //
+			// if any error come then display_errors will return the error.
+			$this->session->set_flashdata("msg", $err);
+			redirect("/admin/ads");
+		}
+
+
+		
+		
 	}
 	function save_category()
 	{

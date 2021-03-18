@@ -7,7 +7,7 @@
 
 		</div>
 		<div class="col-md-6 offset-md-3">
-			<form action="<?= site_url('admin/save_ads') ?>" method="post">
+			<form action="<?= site_url('admin/save_ads') ?>" method="post" enctype="multipart/form-data">
 			<div class="card">
 				<div class="card-body">
 					<div class="form-group">
@@ -36,7 +36,10 @@
 					</div>
 					<div class="form-group">
 						<label>Ads Image</label>
-						<input type="text" class="form-control">
+						<input type="file" name="userfile" class="form-control">
+						<div class="text-danger">
+							<?= $this->session->flashdata("msg"); ?>
+						</div>
 					</div>
 				</div>
 				<div class="card-footer">

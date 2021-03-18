@@ -101,7 +101,7 @@ foreach($ads->result_array() as $data){
 			<div class="thumb-content">
 				<!-- <div class="price">$200</div> -->
 				<a href="">
-					<img class="card-img-top img-fluid" src="<?= base_url(); ?>assets/images/products/products-1.jpg" alt="Card image cap">
+					<img class="card-img-top img-fluid" src="<?= base_url(); ?>assets/ads/<?= $data['image_path'] ?>" alt="Card image cap">
 				</a>
 			</div>
 			<div class="card-body">
